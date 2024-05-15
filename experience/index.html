@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tika Portfolio | Galerry</title>
+    <link rel="stylesheet" href="../styles/output.css">
+    <style>
+        .experience{
+            gap: 4rem;
+
+            .item{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                gap: 2rem;
+
+                &:nth-child(even){
+                    flex-direction: row-reverse;
+                }
+
+                .img{
+                    width: 100%;
+
+                    & img{
+                        border-radius: 1rem;
+                    }
+                }
+
+                .desc{
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .experience{
+                .item{
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    &:nth-child(even){
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-itam">
+    <div class="navbar fixed top-0 w-full flex justify-center p-4 z-30 bg-itam mobile:flex mobile:justify-end">
+        <div class="links w-fit flex items-center gap-8 text-lg font-bold text-pink mobile:absolute mobile:flex-col mobile:right-2 mobile:top-16 mobile:pl-8 mobile:p-4 mobile:bg-itam mobile:shadow-[0_0_20px_2px_rgb(255,255,255,.2)] mobile:rounded-lg mobile:hidden">
+            <a href="../" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Home</a>
+            <a href="../about/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">About</a>
+            <a href="./" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Experience</a>
+            <a href="../gallery/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Galerry</a>
+            <a href="../contact/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Contact</a>
+        </div>
+        <div class="mobile-menu-btn hidden mobile:block text-white">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="28"  height="28"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg>
+        </div>
+    </div>
+    <div class="experience w-[80vw] m-auto flex flex-col items-center my-32 text-white mobile:w-[90vw] tablet:w-[90vw]">
+        <div class="text-3xl font-bold text-white">My Experience</div>
+        <div class="item mobile:flex-col">
+            <div class="img">
+                <img src="../images/mapres.jpeg" alt="">
+            </div>
+            <div class="desc">
+                It's an honor to represent the outstanding students and scholarship recipients at the PLN Institute of Technology. The support from professors, classmates, and scholarships has fueled our growth and dreams. 
+                We've gained invaluable skills and are ready to tackle future challenges. Let's strive for excellence and contribute to society with integrity and innovation. Thank you for believing in us.
+            </div>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="../images/juara.jpeg" alt="">
+            </div>
+            <div class="desc">
+        Leading with Nakama.id through a dynamic five-month incubation journey was exhilarating. We honed our roadmap, financial strategies, and market testing skills, while collaborating with PLN for product testing. Showcasing our innovation at ENLIT ASIA 2023 and pitching to investors were pivotal moments. The SNEKTI 2023 Seminar provided invaluable insights. 
+        Our journey underscores that with dedication, dreams can indeed materialize.
+            </div>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="../images/pengmas.jpeg" alt="">
+            </div>
+            <div class="desc">
+                I worked on Mo-Tamu, a project to implement a mobile guest monitoring system at Perumahan Bunga Raya. As a student representative, I helped guide the community. We published a scientific article and made a video campaign about the project. 
+                It was inspiring to see our impact. I hope this encourages others to engage in community service.
+            </div>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="../images/uniten.jpeg" alt="">
+            </div>
+            <div class="desc">
+                I recently had an amazing experience with the eMobility program visiting PLN Indonesia Power's geothermal power plant. Seeing the technology and processes behind geothermal energy was fascinating and gave me a deep appreciation for sustainable energy production. It was a rare and valuable opportunity that inspired me to keep exploring renewable energy. 
+                I hope this story encourages others to seek out and value such experiences.
+            </div>
+        </div>
+        <div class="item">
+            <div class="img">
+                <img src="../images/pemasaran dan admisi 1.jpeg" alt="">
+            </div>
+            <div class="desc">
+                As a student worker in the marketing and admissions department, I gained invaluable experience in both marketing and administration, crucial for student enrollment at our campus. This role allowed me to learn practical skills in promoting our programs and managing admissions processes. It was an incredible opportunity that provided me with a solid foundation for my future career.
+                I hope my story inspires others to take on similar roles and make the most of the learning opportunities they offer.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
+        const mobileMenu = document.querySelector(".links")
+
+        mobileMenuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("mobile:hidden")
+        })
+    </script>
+</body>
+</html>
