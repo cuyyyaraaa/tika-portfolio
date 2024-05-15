@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tika Portfolio</title>
+    <link rel="stylesheet" href="./styles/output.css">
+    <style>
+        .items-container .items {
+            transition: all .5s;
+        }
+    </style>
+</head>
+<body class="bg-itam">
+    <div class="navbar fixed top-0 w-full flex justify-center p-4 z-30 bg-itam mobile:flex mobile:justify-end">
+        <div class="links w-fit flex items-center gap-8 text-lg font-bold text-pink mobile:absolute mobile:flex-col mobile:right-2 mobile:top-16 mobile:pl-8 mobile:p-4 mobile:bg-itam mobile:shadow-[0_0_20px_2px_rgb(255,255,255,.2)] mobile:rounded-lg mobile:hidden">
+            <a href="./" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Home</a>
+            <a href="./about/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">About</a>
+            <a href="./experience/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Experience</a>
+            <a href="./gallery/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Galerry</a>
+            <a href="./contact/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Contact</a>
+        </div>
+        <div class="mobile-menu-btn hidden mobile:block text-white">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="28"  height="28"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg>
+        </div>
+    </div>
+    <div class="carousel mt-20 w-[70vw] relative overflow-hidden m-auto mobile:w-[90vw]">
+        <div class="items-container flex">
+            <div class="items flex items-center gap-32">
+                <div class="item flex w-[70vw] mobile:w-[90vw]">
+                    <img src="./images/carousel 1.jfif" alt="" class="w-full rounded-lg">
+                </div>
+                <div class="item flex w-[70vw] mobile:w-[90vw]">
+                    <img src="./images/carousel 2.jpg" alt="" class="w-full rounded-lg">
+                </div>
+                <div class="item flex w-[70vw] mobile:w-[90vw]">
+                    <img src="./images/carousel 3.jpg" alt="" class="w-full rounded-lg">
+                </div>
+            </div>
+        </div>
+        <div class="btns absolute top-1/2 text-white flex w-full px-4 mobile:px-2 items-center justify-between">
+            <div class="left flex items-center justify-center rounded-full cursor-pointer">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+            </div>
+            <div class="right flex items-center justify-center rounded-full cursor-pointer">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width=40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+            </div>
+        </div>
+    </div>
+    <div class="person w-[80vw] flex flex-col items-center m-auto my-24 text-white">
+        <div class="img flex w-40">
+            <img src="./images/tiks1.png" alt="Tika">
+        </div>
+        <div class="name font-bold text-2xl">
+            <span class="text-pink">A</span>tikah
+            <span class="text-pink">R</span>ifdah
+            <span class="text-pink">A</span>nsyari
+        </div>
+        <div class="desc text-center">
+            Hi there! I'm Atikah Rifdah Ansyari, born on May 6, 2005. I'm the youngest of four siblings.
+            I absolutely love exploring new things, meeting new friends, and gathering new experiences. 
+            According to my friends, I'm pretty reliable—well, at least most of the time! xixixi ^^
+        </div>
+        <div class="links flex items-center gap-4 mt-8">
+            <a href="https://github.com/cuyyyaraaa" class="p-2 rounded-full bg-pink text-black transition-all hover:scale-105">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/atikah-rifdah-ansyari/" class="p-2 rounded-full bg-blue-700 transition-all hover:scale-105">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+            </a>
+        </div>
+    </div>
+    <script>
+        const leftBtn = document.querySelector(".btns .left")
+        const rightBtn = document.querySelector(".btns .right")
+
+        const carouselItems = document.querySelector(".items-container .items")
+
+        let itemIndex = 1
+
+        rightBtn.addEventListener("click", () => {
+            if (itemIndex < 3){
+                let width = rightBtn.parentElement.parentElement.clientWidth
+
+                itemIndex++
+                carouselItems.style.transform = `translateX(calc(-${width * (itemIndex - 1)}px - ${8 * (itemIndex - 1)}rem))`
+            }
+        })
+
+        leftBtn.addEventListener("click", () => {
+            if (itemIndex > 1){
+                let width = leftBtn.parentElement.parentElement.clientWidth
+
+                itemIndex--
+                carouselItems.style.transform = `translateX(calc(-${width * (itemIndex - 1)}px - ${8 * (itemIndex - 1)}rem))`
+            }
+        })
+
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
+        const mobileMenu = document.querySelector(".links")
+
+        mobileMenuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("mobile:hidden")
+        })
+    </script>
+</body>
+</html>
