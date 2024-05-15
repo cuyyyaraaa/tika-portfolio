@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tika Portfolio | Galerry</title>
+    <link rel="stylesheet" href="../styles/output.css">
+</head>
+<body class="bg-itam">
+    <div class="navbar fixed top-0 w-full flex justify-center p-4 z-30 bg-itam mobile:flex mobile:justify-end">
+        <div class="links w-fit flex items-center gap-8 text-lg font-bold text-pink mobile:absolute mobile:flex-col mobile:right-2 mobile:top-16 mobile:pl-8 mobile:p-4 mobile:bg-itam mobile:shadow-[0_0_20px_2px_rgb(255,255,255,.2)] mobile:rounded-lg mobile:hidden">
+            <a href="../" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Home</a>
+            <a href="../about/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">About</a>
+            <a href="../experience/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Experience</a>
+            <a href="./" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Galerry</a>
+            <a href="../contact/" class="relative after:absolute after:bottom-0 after:right-0 hover:after:h-[2px] after:w-6 after:bg-white">Contact</a>
+        </div>
+        <div class="mobile-menu-btn hidden mobile:block text-white">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="28"  height="28"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg>
+        </div>
+    </div>
+    <div class="gallery m-auto mt-32 w-[80vw] flex flex-col items-center gap-4">
+        <div class="text-3xl font-bold text-white">Gallery</div>
+        <div class="items flex w-full items-center rounded-lg overflow-hidden gap-4 mobile:flex-col">
+            <div class="item w-full cursor-pointer">
+                <img src="../images/gallery6.jpg" alt="" class="rounded-lg">
+            </div>
+            <div class="item w-full cursor-pointer">
+                <img src="../images/gallery8.jpeg" alt="" class="rounded-lg">
+            </div>
+            <div class="item w-full cursor-pointer">
+                <img src="../images/gallery3.jpeg" alt="" class="rounded-lg">
+            </div>
+            <div class="item w-full cursor-pointer">
+                <img src="../images/gallery7.jpeg" alt="" class="rounded-lg">
+            </div>
+            <div class="item w-full cursor-pointer">
+                <img src="../images/gallery9.jpeg" alt="" class="rounded-lg">
+            </div>
+        </div>
+    </div>
+    <div class="selected-img hidden w-full h-screen m-auto absolute z-40 justify-center items-center top-0 left-0 p-4 bg-[rgb(0,0,0,.2)] backdrop-blur">
+        <img src="" alt="" class="h-[80vh] rounded-lg">
+        <div class="close-selected-img-btn rounded-full bg-white absolute top-4 right-4 cursor-pointer">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
+        const mobileMenu = document.querySelector(".links")
+
+        mobileMenuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("mobile:hidden")
+        })
+
+        if (window.matchMedia("(min-width: 481px)").matches){
+            const imgs = document.querySelectorAll(".items .item img")
+            const selectedImg = document.querySelector(".selected-img img")
+            const closeSelectedImg = document.querySelector(".close-selected-img-btn")
+    
+            imgs.forEach(img => {
+                img.addEventListener("click", () => {
+                    selectedImg.setAttribute("src", img.getAttribute("src"))
+                    selectedImg.parentElement.classList.toggle("hidden")
+                    selectedImg.parentElement.classList.toggle("flex")
+                })
+            })
+    
+            closeSelectedImg.addEventListener("click", () => {
+                selectedImg.setAttribute("src", "")
+                selectedImg.parentElement.classList.toggle("hidden")
+                selectedImg.parentElement.classList.toggle("flex")
+            })
+        }
+    </script>
+</body>
+</html>
